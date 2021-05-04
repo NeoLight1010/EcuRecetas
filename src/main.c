@@ -1,5 +1,6 @@
 #include <gtk/gtk.h>
 #include <stdio.h>
+#include <widgets/main_menu.h>
 
 void activate(GtkApplication *app, gpointer data) {
   GtkWidget *window;
@@ -7,7 +8,11 @@ void activate(GtkApplication *app, gpointer data) {
   window = gtk_application_window_new(app);
   gtk_window_set_title(GTK_WINDOW(window), "EcuRecetas");
   gtk_window_set_default_size(GTK_WINDOW(window), 600, 450);
-  gtk_widget_show(window);
+
+  GtkWidget *main_menu = generate_main_menu();
+  gtk_container_add(GTK_CONTAINER(window), main_menu);
+
+  gtk_widget_show_all(window);
 }
 
 int main(int argc, char **argv) {
