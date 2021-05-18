@@ -22,15 +22,10 @@ GtkWidget *generate_main_menu(gpointer window_pointer) {
   gtk_box_set_spacing(GTK_BOX(button_box), MAIN_SPACING);
   gtk_box_pack_start(GTK_BOX(main_container), button_box, 1, 0, MAIN_SPACING);
 
-  // Search Recipe Button
-  GtkWidget *search_recipe_btn = gtk_button_new();
-  gtk_button_set_label(GTK_BUTTON(search_recipe_btn), "Buscar Receta");
-  gtk_container_add(GTK_CONTAINER(button_box), search_recipe_btn);
-
-  // See Favorites Button
-  GtkWidget *see_favorites_btn = gtk_button_new();
-  gtk_button_set_label(GTK_BUTTON(see_favorites_btn), "Ver recetas favoritas");
-  gtk_container_add(GTK_CONTAINER(button_box), see_favorites_btn);
+  // See Recipes Button
+  GtkWidget *see_recipes_btn = gtk_button_new();
+  gtk_button_set_label(GTK_BUTTON(see_recipes_btn), "Ver Recetas");
+  gtk_container_add(GTK_CONTAINER(button_box), see_recipes_btn);
 
   // Exit Button
   GtkWidget *exit_btn = gtk_button_new();
